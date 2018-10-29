@@ -15,7 +15,7 @@ It consists of ```multi-process_visual``` & ```pallete```
 * it will use all the cpu are avaliable.
 * ```pallete.py``` provides palletes of different datasets, you can custom it yourself.
 
-## Converting  ```index``` of Cityscapes labels
+## Converting  index of Cityscapes labels
 It consists of ```reverse_idx``` & ```cityscapes_labels```
 * ```reverse_idx.py``` provides two functions for converting the ```idx```.
 * ```cityscapes_labels```is based on [cityscapesScripts](https://github.com/mcordts/cityscapesScripts)
@@ -27,4 +27,4 @@ It consists of ```reverse_idx``` & ```cityscapes_labels```
 ## TODO
 
 - [ ] Converting scripts for [PASCAL Context dataset](https://cs.stanford.edu/~roozbeh/pascal-context/)
-- [ ] [ADE20k](http://groups.csail.mit.edu/vision/datasets/ADE20K/)
+- [ ] Scripts for [ADE20k](http://groups.csail.mit.edu/vision/datasets/ADE20K/)
