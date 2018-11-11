@@ -24,6 +24,9 @@ It consists of ```reverse_idx``` & ```cityscapes_labels```
 * ```contour```is for computing the boundary maps used in [pix2pixHD](https://github.com/NVIDIA/pix2pixHD) based on instance labels.
 * ```scripts```is for coping desired images from files and generating lists of dataset (ie. w/ lst, w/o lst)
 
+## Update
+* ```coco2voc.py```converts coco2017 labels, which are bigger than 1k pixels, to pascal voc format. This scripts based requires [pycocotools](https://github.com/cocodataset/cocoapi) and [pytorch](https://pytorch.org/) 
+
 ## TODO
 
 - [ ] Converting scripts for [PASCAL Context dataset](https://cs.stanford.edu/~roozbeh/pascal-context/)
