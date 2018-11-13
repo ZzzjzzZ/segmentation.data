@@ -27,7 +27,9 @@ It consists of ```reverse_idx``` & ```cityscapes_labels```
 ## Update
 * ```coco2voc.py```converts coco2017 labels, which are bigger than 1k pixels, to pascal voc format. This scripts based requires [pycocotools](https://github.com/cocodataset/cocoapi) and [pytorch](https://pytorch.org/) 
 
+* ```convert_pascal_context.py``` converts [pascal context](https://cs.stanford.edu/~roozbeh/pascal-context/) from 456 categories (.mat) to 59 categories (.png -- color & gray). I have listed the ```mapping ids```, you can also use func ```search_map_id``` to generate it. 
+
 ## TODO
 
-- [ ] Converting scripts for [PASCAL Context dataset](https://cs.stanford.edu/~roozbeh/pascal-context/)
+- [x] Converting scripts for [PASCAL Context dataset](https://cs.stanford.edu/~roozbeh/pascal-context/)
 - [ ] Scripts for [ADE20k](http://groups.csail.mit.edu/vision/datasets/ADE20K/)
