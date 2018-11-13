@@ -93,16 +93,16 @@ def decode_labels(mask, num_images=1, num_classes=60):
 
 def convert(mat):
     # save path
-    gary_save_path = os.path.join(SAVE_PATH, 'SegmentationClass')
+    gray_save_path = os.path.join(SAVE_PATH, 'SegmentationClass')
     color_save_path = os.path.join(SAVE_PATH, 'SegmentationClassColor')
 
-    if not os.path.exists(gary_save_path):
-        os.mkdir(gary_save_path)
+    if not os.path.exists(gray_save_path):
+        os.mkdir(gray_save_path)
     if not os.path.exists(color_save_path):
         os.mkdir(color_save_path)
 
     id = mat.split('/')[-1][:-4]
-    gary_save_name = os.path.join(gary_save_path, id + '.png')
+    gray_save_name = os.path.join(gray_save_path, id + '.png')
     color_save_name = os.path.join(color_save_path, id + '.png')
 
     # load mat
@@ -119,11 +119,11 @@ def convert(mat):
         index += 1
 
     # save converted images
-    im_gary = Image.fromarray(cvt_temp)
-    im_gary.save(gary_save_name)
+    im_gray = Image.fromarray(cvt_temp)
+    im_gray.save(gray_save_name)
 
-    data_gary = cvt_temp[np.newaxis, :, :, np.newaxis]
-    data_color = decode_labels(data_gary, num_classes=NUM_CLASS)
+    data_gray = cvt_temp[np.newaxis, :, :, np.newaxis]
+    data_color = decode_labels(data_gray, num_classes=NUM_CLASS)
     im_color =Image.fromarray(data_color[0])
     im_color.save(color_save_name)
 
